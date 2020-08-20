@@ -1,0 +1,37 @@
+.header {
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, .6);
+
+    .header__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 50px;
+        padding: 30px 0;
+
+        .logo {
+            font-size: larger;
+            font-weight: bolder;
+            color: #fff;
+        }
+
+        .navigation__list {
+            display: flex;
+
+            .navigation__list-element {
+                padding: 0 40px;
+                color: white;
+                font-weight: bold;
+            }
+            .navigation__list-element:hover {
+                border-bottom: 2px solid #19f6e8;
+                padding-bottom: 25px;
+            }
+        }
+    }
+
+
+}
+
+
+
