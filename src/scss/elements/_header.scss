@@ -1,6 +1,7 @@
 .header {
     background: rgba(0, 0, 0, 0.5);
     box-shadow: 0 6px 10px rgba(0, 0, 0, .6);
+    font-size: 0.8em;
 
     .header__box {
         display: flex;
@@ -10,9 +11,9 @@
         padding: 30px 0;
 
         .logo {
-            font-size: larger;
+            font-size: 2em;
             font-weight: bolder;
-            color: #fff;
+            color: $fontColor;
         }
 
         .navigation__list {
@@ -24,7 +25,7 @@
                 font-weight: bold;
             }
             .navigation__list-element:hover {
-                border-bottom: 2px solid #19f6e8;
+                border-bottom: 2px solid $primaryColor;
                 padding-bottom: 25px;
             }
         }

@@ -5,6 +5,7 @@ const App = () => {
 
 
     return (
+        <>
         <header className={"header"}>
             <div className={"header__box"}>
                 <a href={"/"} className={"logo"}>FinKa +</a>
@@ -17,6 +18,28 @@ const App = () => {
                 </nav>
             </div>
         </header>
+        <h1>Kalkulatory</h1>
+        <div className={"calcSelect__section"}>
+            <div className={"calcSelect__section-box percentBox"}>
+                <i className="fi-xtlux2-percent-thin"></i>
+                <p>Zwykły procent</p>
+            </div>
+
+            <div className={"calcSelect__section-box discountBox"}>
+                <i className="fi-xtllx2-label-thin"></i>
+               <p>Rabat</p>
+            </div>
+
+            <div className={"calcSelect__section-box vatBox"}>
+                <i className="fi-xtluh2-shopping-cart-thin"></i>
+               <p>VAT</p>
+            </div>
+
+
+
+        </div>
+
+        </>
     )
 }
 
