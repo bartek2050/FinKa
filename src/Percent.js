@@ -1,16 +1,16 @@
 import React, {useState} from 'react';
 
-const Calculator = () => {
+const Percent = () => {
     const [percent, setPercent] = useState("");
     const [number, setNumber] = useState("");
 
     return (
         <div className={"percentSection"}>
-        <h2>Zwykły procent</h2> <span>x=a*b/100</span>
+        <h2>Zwykły procent</h2> <span>y=x*p/100</span>
         <form className={"percentForm"}>
             <label>
                Procent:
-                <input type={"text"} name={"percent"} placeholder={"%"} onChange={event => setPercent(event.target.value)} />
+                <input type={"text"} name={"percent"} placeholder={"%"} onChange={event => setPercent(event.target.value)}/>
             </label>
             <label>
                 Z liczby:
@@ -23,4 +23,4 @@ const Calculator = () => {
 
 }
 
-export default Calculator;
+export default Percent;

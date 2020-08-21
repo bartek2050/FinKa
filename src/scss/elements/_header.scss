@@ -23,6 +23,7 @@
                 padding: 0 40px;
                 color: white;
                 font-weight: bold;
+                transition: 0.3s ease-out;
             }
             .navigation__list-element:hover {
                 border-bottom: 2px solid $primaryColor;
