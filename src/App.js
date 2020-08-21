@@ -2,6 +2,7 @@ import React from 'react';
 import './scss/main.scss'
 import Percent from "./Percent";
 import Vat from "./Vat";
+import Discount from "./Discount";
 
 const App = () => {
 
@@ -41,6 +42,7 @@ const App = () => {
             <section className={"calculators__section"}>
                 <Percent/>
                 <Vat/>
+                <Discount/>
 
             </section>
 

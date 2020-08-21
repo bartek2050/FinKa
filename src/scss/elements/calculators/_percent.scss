@@ -1,0 +1,7 @@
+.percentSection {
+@include calcSection
+
+    .percentForm {
+@include calcForm
+    }
+}
