@@ -1,5 +1,6 @@
 import React from 'react';
 import './scss/main.scss'
+import Calculator from "./Calculators";
 
 const App = () => {
 
@@ -19,7 +20,7 @@ const App = () => {
             </div>
         </header>
         <h1>Kalkulatory</h1>
-        <div className={"calcSelect__section"}>
+        <section className={"calcSelect__section"}>
             <div className={"calcSelect__section-box percentBox"}>
                 <i className="fi-xtlux2-percent-thin"></i>
                 <p>Zwykły procent</p>
@@ -34,10 +35,12 @@ const App = () => {
                 <i className="fi-xtluh2-shopping-cart-thin"></i>
                <p>VAT</p>
             </div>
+        </section>
 
+            <section className={"calculators__section"}>
+                <Calculator/>
 
-
-        </div>
+            </section>
 
         </>
     )
