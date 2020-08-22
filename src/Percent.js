@@ -11,6 +11,7 @@ const Percent = () => {
             <label>
                Procent:
                 <input type={"text"} name={"percent"} placeholder={"%"} onChange={event => setPercent(event.target.value)}/>
+                <span> %</span>
             </label>
             <label>
                 Z liczby:
