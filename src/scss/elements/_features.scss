@@ -29,4 +29,8 @@ h1 {
         @include calcBoxes__hover ($primaryColor)
     }
 
+    .savingsBox:hover {
+        @include calcBoxes__hover ($primaryColor)
+    }
+
 }

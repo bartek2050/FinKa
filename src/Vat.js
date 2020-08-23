@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 const Vat = () => {
-    const [tax, setTax] = useState("23");
+    const [tax, setTax] = useState(23);
     const [price, setPrice] = useState("");
 
 

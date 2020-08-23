@@ -1,0 +1,32 @@
+.savingsSection {
+    @include calcSection;
+
+    .savingsForm {
+        @include calcForm;
+
+        select {
+            padding: 8px 10px;
+            margin-left: 5px;
+            width: 100px;
+            font-weight: bold;
+        }
+    }
+}
+
+.offerButton {
+    @include calcBoxes;
+    margin: 15px;
+    width: 350px;
+    height: 100px;
+    i {
+        padding-bottom: 10px;
+        color: $primaryColor;
+    }
+
+}
+
+.offerButton:hover {
+    @include calcBoxes__hover($primaryColor);
+    width: 350px;
+    height: 100px;
+}

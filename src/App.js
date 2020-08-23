@@ -3,6 +3,7 @@ import './scss/main.scss'
 import Percent from "./Percent";
 import Vat from "./Vat";
 import Discount from "./Discount";
+import Savings from "./Savings";
 
 const App = () => {
 
@@ -21,7 +22,7 @@ const App = () => {
                 </nav>
             </div>
         </header>
-        <h1>Kalkulatory</h1>
+        <h1>Wybierz kalkulator</h1>
         <section className={"calcSelect__section"}>
             <div className={"calcSelect__section-box percentBox"}>
                 <i className="fi-xtlux2-percent-thin"></i>
@@ -37,12 +38,18 @@ const App = () => {
                 <i className="fi-xtluh2-shopping-cart-thin"></i>
                <p>VAT</p>
             </div>
+
+            <div className={"calcSelect__section-box savingsBox"}>
+                <i className="fi-ctlux2-dollar-thin"></i>
+               <p>Kalkulator zysku z lokat</p>
+            </div>
         </section>
 
             <section className={"calculators__section"}>
                 <Percent/>
                 <Vat/>
                 <Discount/>
+                <Savings/>
 
             </section>
 
