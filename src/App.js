@@ -4,6 +4,7 @@ import Percent from "./Percent";
 import Vat from "./Vat";
 import Discount from "./Discount";
 import Savings from "./Savings";
+import Salary from "./Salary";
 
 const App = () => {
 
@@ -43,6 +44,11 @@ const App = () => {
                 <i className="fi-ctlux2-dollar-thin"></i>
                <p>Kalkulator zysku z lokat</p>
             </div>
+
+            <div className={"calcSelect__section-box salaryBox"}>
+                <i className="fi-xtlux2-tools-thin"></i>
+               <p>Kalkulator wynagrodzenia</p>
+            </div>
         </section>
 
             <section className={"calculators__section"}>
@@ -50,6 +56,7 @@ const App = () => {
                 <Vat/>
                 <Discount/>
                 <Savings/>
+                <Salary/>
 
             </section>
 

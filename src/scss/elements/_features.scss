@@ -33,4 +33,8 @@ h1 {
         @include calcBoxes__hover ($primaryColor)
     }
 
+    .salaryBox:hover {
+        @include calcBoxes__hover ($primaryColor)
+    }
+
 }

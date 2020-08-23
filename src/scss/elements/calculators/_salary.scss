@@ -1,0 +1,7 @@
+.salarySection {
+    @include calcSection;
+
+    .salaryForm {
+        @include calcForm;
+    }
+}
