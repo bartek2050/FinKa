@@ -6,6 +6,7 @@ import Main from "./Main";
 import News from "./News";
 import Crypto from "./Crypto";
 import Exchange from "./Exchange";
+import Footer from "./Footer";
 
 const App = () => {
 
@@ -20,6 +21,7 @@ const App = () => {
                 <Route path={"/crypto"} exact component={() => <Crypto />} />
                 <Route path={"/news"} exact component={() => <News />} />
             </Switch>
+            <Footer/>
         </Router>
         </>
     )
