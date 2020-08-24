@@ -43,7 +43,7 @@ const Savings = () => {
                 <div onClick={() => setAdshow(!adshow)} className={"offerButton"}>
                     Sprawdź ofertę lokat >>>
                 </div>
-                {adshow && <img alt={"banner"} src="img/lokata-wiosenna.jpg"/>}
+                {adshow && <img alt={"banner"} src={process.env.PUBLIC_URL + '/lokata-wiosenna.jpg'}/>}
             </div>
         </>
     )

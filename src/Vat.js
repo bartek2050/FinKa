@@ -4,6 +4,17 @@ const Vat = () => {
     const [vat, setVat] = useState(23);
     const [price, setPrice] = useState("");
 
+    const NonErrorFix = (price, vat) => {
+        let numb1 = (parseInt(vat)/100 * parseInt(price))+parseInt(price);
+        if (isNaN(numb1)) {
+            return 0;
+        } else {
+            return(
+            ((parseInt(vat)/100 * parseInt(price))+parseInt(price)).toFixed(2)
+            );
+        }
+    }
+
 
 
     return (
@@ -20,7 +31,7 @@ const Vat = () => {
                     <input type={"text"} name={"price"} onChange={event => setPrice(event.target.value)} />
                     <span> zł</span>
                 </label>
-                <p>Cena brutto: {((parseInt(vat)/100 * parseInt(price))+parseInt(price)).toFixed(2)} zł</p>
+                <p>Cena brutto: {NonErrorFix(price, vat)} zł</p>
                 <p>Podatek VAT: {(parseInt(price) * parseInt(vat)/100).toFixed(2)} zł</p>
             </form>
         </div>
