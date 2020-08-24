@@ -14,5 +14,10 @@ a {
 body {
     font-family: "Roboto Condensed", sans-serif;
     background: linear-gradient(#141e30, #243b55);
-    height: 100vh;
+    height: 100%;
+
+    span {
+        font-size: 0.8em;
+        font-style: italic;
+    }
 }

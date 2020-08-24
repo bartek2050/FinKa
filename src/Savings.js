@@ -41,8 +41,7 @@ const Savings = () => {
                         (netto): {((parseInt(amount) * parseInt(period) / 12 * parseInt(interest) / 100) * 0.81).toFixed(2)} zł</p>
                 </form>
                 <div onClick={() => setAdshow(!adshow)} className={"offerButton"}>
-                    <i className="fi-ctsusl-dollar-thin"></i>
-                    Sprawdź ofertę lokat
+                    Sprawdź ofertę lokat >>>
                 </div>
                 {adshow && <img alt={"banner"} src="img/lokata-wiosenna.jpg"/>}
             </div>

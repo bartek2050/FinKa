@@ -1,65 +1,26 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './scss/main.scss'
-import Percent from "./Percent";
-import Vat from "./Vat";
-import Discount from "./Discount";
-import Savings from "./Savings";
-import Salary from "./Salary";
+import Header from "./Header";
+import Main from "./Main";
+import News from "./News";
+import Crypto from "./Crypto";
+import Exchange from "./Exchange";
 
 const App = () => {
 
 
     return (
         <>
-        <header className={"header"}>
-            <div className={"header__box"}>
-                <a href={"/"} className={"logo"}>FinKa +</a>
-                <nav className={"header__navigation"}>
-                    <li className={"navigation__list"}>
-                        <ul><a href={"/"} className={"navigation__list-element"}>EXCHANGE</a></ul>
-                        <ul><a href={"/"} className={"navigation__list-element"}>CRYPTO</a></ul>
-                        <ul><a href={"/"} className={"navigation__list-element"}>NEWS</a></ul>
-                    </li>
-                </nav>
-            </div>
-        </header>
-        <h1>Wybierz kalkulator</h1>
-        <section className={"calcSelect__section"}>
-            <div className={"calcSelect__section-box percentBox"}>
-                <i className="fi-xtlux2-percent-thin"></i>
-                <p>Zwykły procent</p>
-            </div>
-
-            <div className={"calcSelect__section-box discountBox"}>
-                <i className="fi-xtllx2-label-thin"></i>
-               <p>Rabat</p>
-            </div>
-
-            <div className={"calcSelect__section-box vatBox"}>
-                <i className="fi-xtluh2-shopping-cart-thin"></i>
-               <p>VAT</p>
-            </div>
-
-            <div className={"calcSelect__section-box savingsBox"}>
-                <i className="fi-ctlux2-dollar-thin"></i>
-               <p>Kalkulator zysku z lokat</p>
-            </div>
-
-            <div className={"calcSelect__section-box salaryBox"}>
-                <i className="fi-xtlux2-tools-thin"></i>
-               <p>Kalkulator wynagrodzenia</p>
-            </div>
-        </section>
-
-            <section className={"calculators__section"}>
-                <Percent/>
-                <Vat/>
-                <Discount/>
-                <Savings/>
-                <Salary/>
-
-            </section>
-
+        <Router>
+            <Header/>
+            <Switch>
+                <Route path={"/"} exact component={() => <Main />} />
+                <Route path={"/exchange"} exact component={() => <Exchange />} />
+                <Route path={"/crypto"} exact component={() => <Crypto />} />
+                <Route path={"/news"} exact component={() => <News />} />
+            </Switch>
+        </Router>
         </>
     )
 }
