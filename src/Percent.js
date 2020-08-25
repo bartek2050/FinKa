@@ -5,6 +5,8 @@ const Percent = () => {
     const [number, setNumber] = useState("");
 
     return (
+
+
         <div className={"percentSection"}>
         <h2>Zwykły procent</h2> <span>y=x*p/100</span>
         <form className={"percentForm"}>

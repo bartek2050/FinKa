@@ -11,7 +11,7 @@ const Calculators = () => {
         <>
             <Router>
                 <Switch>
-                    <Route path={"/percent"} exact component={() => <Percent />} />
+                    <Route path={"/percent"} component={Percent} />
                     <Route path={"/discount"} exact component={() => <Discount />} />
                     <Route path={"/vat"} exact component={() => <Vat />} />
                     <Route path={"/savings"} exact component={() => <Savings />} />
