@@ -10,12 +10,16 @@ const Percent = () => {
         <form className={"percentForm"}>
             <label>
                Procent:
-                <input type={"text"} name={"percent"} placeholder={"%"} onChange={event => setPercent(event.target.value)}/>
-                <span> %</span>
+                <input type={"number"}
+                       name={"percent"}
+                       placeholder={"%"}
+                       onChange={event => setPercent(event.target.value)}/> %
             </label>
             <label>
                 Z liczby:
-                <input type={"text"} name={"number"} onChange={event => setNumber(event.target.value)} />
+                <input type={"number"}
+                       name={"number"}
+                       onChange={event => setNumber(event.target.value)} />
             </label>
             <p>Wynosi: {Math.imul(number,percent)/100}</p>
         </form>
