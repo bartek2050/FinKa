@@ -28,26 +28,28 @@ const Vat = () => {
 
 
     return (
-        <div className={"vatSection"}>
-            <h2>VAT</h2> <span>wartość domyślna 23%</span>
-            <form className={"vatForm"}>
-                <label>
-                    Wysokość podatku VAT:
-                    <input value={vat}
-                           type={"number"}
-                           name={"tax"}
-                           placeholder={"%"}
-                           onChange={event => setVat(event.target.value)}/> %
-                </label>
-                <label>
-                    Cena Netto:
-                    <input type={"number"}
-                           name={"price"}
-                           onChange={event => setPrice(event.target.value)}/> zł
-                </label>
-                <p>Cena brutto: {grossPrice(price, vat)} zł</p>
-                <p>Podatek VAT: {vatTax(price, vat)} zł</p>
-            </form>
+        <div className={"mainSection"}>
+            <div className={"vatSection"}>
+                <h2>VAT</h2> <span>wartość domyślna 23%</span>
+                <form className={"vatForm"}>
+                    <label>
+                        Wysokość podatku VAT:
+                        <input value={vat}
+                               type={"number"}
+                               name={"tax"}
+                               placeholder={"%"}
+                               onChange={event => setVat(event.target.value)}/> %
+                    </label>
+                    <label>
+                        Cena Netto:
+                        <input type={"number"}
+                               name={"price"}
+                               onChange={event => setPrice(event.target.value)}/> zł
+                    </label>
+                    <p>Cena brutto: {grossPrice(price, vat)} zł</p>
+                    <p>Podatek VAT: {vatTax(price, vat)} zł</p>
+                </form>
+            </div>
         </div>
     )
 

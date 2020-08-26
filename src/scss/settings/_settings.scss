@@ -16,10 +16,15 @@ a {
 body {
     font-family: "Roboto", sans-serif;
     background: linear-gradient(#141e30, #243b55);
-    height: 100%;
+    height: auto;
 
     span {
         font-size: 0.8em;
         font-style: italic;
     }
+}
+
+.mainSection {
+    display: flex;
+    justify-content: center;
 }

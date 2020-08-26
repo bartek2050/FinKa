@@ -12,29 +12,64 @@ h1 {
 
     .calcSelect__section-box {
         @include calcBoxes;
+
         i {
             display: block;
         }
     }
 
     .percentBox:hover {
-        @include calcBoxes__hover ($boxColor1)
+        @include calcBoxes__hover($boxColor1)
     }
 
     .discountBox:hover {
-        @include calcBoxes__hover ($boxColor5)
+        @include calcBoxes__hover($boxColor5)
     }
 
     .vatBox:hover {
-        @include calcBoxes__hover ($primaryColor)
+        @include calcBoxes__hover($primaryColor)
     }
 
     .savingsBox:hover {
-        @include calcBoxes__hover ($primaryColor)
+        @include calcBoxes__hover($primaryColor)
     }
 
     .salaryBox:hover {
-        @include calcBoxes__hover ($primaryColor)
+        @include calcBoxes__hover($primaryColor)
     }
-
 }
+
+.emptyCalc {
+    margin: 20px 0;
+    border: 1px dashed #fff;
+    width: 600px;
+    height: 300px;
+    color: $fontColor;
+    text-align: center;
+    padding-top: 100px;
+    text-align: center;
+
+    h1 {
+            color: #fff;
+            font-size: 2em;
+            text-transform: uppercase;
+            font-weight: 700;
+            background: linear-gradient(to right, $primaryColor 10%, #fff 50%, $primaryColor 60%);
+            background-size: auto auto;
+            background-clip: border-box;
+            background-size: 200% auto;
+            color: #fff;
+            background-clip: text;
+            text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textclip 1.5s linear infinite;
+            display: inline-block;
+        }
+
+        @keyframes textclip {
+            to {
+                background-position: 200% center;
+            }
+        }
+    }

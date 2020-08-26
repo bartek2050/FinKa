@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import {makeStyles, MuiThemeProvider, withStyles} from '@material-ui/core/styles';
+import {makeStyles, withStyles} from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -11,6 +11,7 @@ const TableFontColor = withStyles({
     '@global': {
         ".MuiTableCell-root": {
             color: "white",
+
         }
     }
 })(() => null);
@@ -34,7 +35,7 @@ const Crypto = () => {
                     // TODO key
                     <TableRow style={{color: "primary"}}>
                                 <TableCell><img style={{width: "30px", height: "30px"}} alt={"bitcoin"} src={el.image}/></TableCell>
-                                <TableCell>{el.market_cap_rank}</TableCell>
+                                <TableCell>{el.market_cap_rank} </TableCell>
                                 <TableCell>{el.name}</TableCell>
                                 <TableCell>{el.symbol}</TableCell>
                                 <TableCell>{el.current_price}zł</TableCell>

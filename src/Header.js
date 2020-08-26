@@ -7,7 +7,7 @@ const Header = () => {
     return(
         <header className={"header"}>
             <div className={"header__box"}>
-                <Link to={"/"} className={"logo"}>FinKa +</Link>
+                <Link to={"/"} className={"logo"}>FinKa <i className="fi-swluxl-plus-solid"></i></Link>
                 <nav className={"header__navigation"}>
                     <li className={"navigation__list"}>
                         <ul><Link to={"/exchange"} className={"navigation__list-element"}>EXCHANGE</Link></ul>

@@ -1,6 +1,6 @@
 .header {
     background: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, .6);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .6);
     font-size: 0.8em;
 
     .header__box {
@@ -8,26 +8,31 @@
         justify-content: space-between;
         align-items: center;
         margin: 0 50px;
-        padding: 30px 0;
+        padding: 20px 0;
 
         .logo {
-            font-size: 2em;
+            font-size: 2.2em;
             font-weight: bolder;
             color: $fontColor;
+
+            i {
+                color: $primaryColor;
+            }
         }
 
         .navigation__list {
             display: flex;
 
             .navigation__list-element {
+                font-size: 1.4em;
                 padding: 0 40px;
                 color: white;
                 font-weight: bold;
                 transition: 0.3s ease-out;
             }
+
             .navigation__list-element:hover {
-                border-bottom: 2px solid $primaryColor;
-                padding-bottom: 25px;
+                color: $primaryColor;
             }
         }
     }
