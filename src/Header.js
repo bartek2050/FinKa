@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from "react-router-dom";
+import Badge from '@material-ui/core/Badge';
+import MailIcon from '@material-ui/icons/Mail';
 
 const Header = () => {
     return(
@@ -11,6 +13,8 @@ const Header = () => {
                         <ul><Link to={"/exchange"} className={"navigation__list-element"}>EXCHANGE</Link></ul>
                         <ul><Link to={"/crypto"} className={"navigation__list-element"}>CRYPTO</Link></ul>
                         <ul><Link to={"/news"} className={"navigation__list-element"}>NEWS</Link></ul>
+                        <ul><Badge badgeContent={2} color="secondary">
+                            <MailIcon style={{color: "white"}}/> </Badge></ul>
                     </li>
                 </nav>
             </div>

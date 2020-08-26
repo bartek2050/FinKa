@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import Buttons from "./Buttons";
 
 const Discount = () => {
     const [discount, setDiscount] = useState("");
@@ -29,7 +28,6 @@ const Discount = () => {
 
     return (
         <>
-        <Buttons/>
         <div className={"discountSection"}>
             <h2>Rabat</h2>
             <form className={"discountForm"}>
