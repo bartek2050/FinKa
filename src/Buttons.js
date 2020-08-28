@@ -5,7 +5,6 @@ import React from "react";
 const Buttons = () => {
     return (
         <>
-            <h1>Wybierz kalkulator</h1>
             <section className={"calcSelect__section"}>
                 <Link to={"/percent"} className={"calcSelect__section-box percentBox"}>
                     <i className="fi-xtlux2-percent-thin"/>
