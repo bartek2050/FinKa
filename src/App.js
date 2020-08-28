@@ -1,44 +1,38 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './scss/main.scss'
+import Header from "./Header";
+import Main from "./Main";
+import Crypto from "./Crypto";
+import Exchange from "./Exchange";
+import Footer from "./Footer";
+import Percent from "./Percent";
+import Discount from "./Discount";
+import Vat from "./Vat";
+import Savings from "./Savings";
+import Salary from "./Salary";
+import Buttons from "./Buttons";
 
 const App = () => {
 
 
     return (
         <>
-        <header className={"header"}>
-            <div className={"header__box"}>
-                <a href={"/"} className={"logo"}>FinKa +</a>
-                <nav className={"header__navigation"}>
-                    <li className={"navigation__list"}>
-                        <ul><a href={"/"} className={"navigation__list-element"}>EXCHANGE</a></ul>
-                        <ul><a href={"/"} className={"navigation__list-element"}>CRYPTO</a></ul>
-                        <ul><a href={"/"} className={"navigation__list-element"}>NEWS</a></ul>
-                    </li>
-                </nav>
-            </div>
-        </header>
-        <h1>Kalkulatory</h1>
-        <div className={"calcSelect__section"}>
-            <div className={"calcSelect__section-box percentBox"}>
-                <i className="fi-xtlux2-percent-thin"></i>
-                <p>Zwykły procent</p>
-            </div>
-
-            <div className={"calcSelect__section-box discountBox"}>
-                <i className="fi-xtllx2-label-thin"></i>
-               <p>Rabat</p>
-            </div>
-
-            <div className={"calcSelect__section-box vatBox"}>
-                <i className="fi-xtluh2-shopping-cart-thin"></i>
-               <p>VAT</p>
-            </div>
-
-
-
-        </div>
-
+        <Router>
+            <Header/>
+            <Buttons/>
+            <Switch>
+                <Route path={"/"} exact component={Main} />
+                <Route path={"/exchange"}  component={Exchange} />
+                <Route path={"/crypto"}  component={Crypto} />
+                <Route path={"/percent"} component={Percent} />
+                <Route path={"/discount"}  component={Discount}/>
+                <Route path={"/vat"}  component={Vat} />
+                <Route path={"/savings"}  component={Savings}/>
+                <Route path={"/salary"}  component={Salary}/>
+            </Switch>
+            <Footer/>
+        </Router>
         </>
     )
 }

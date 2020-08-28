@@ -1,0 +1,7 @@
+.discountSection {
+    @include calcSection
+
+    .discountForm {
+        @include calcForm
+    }
+}

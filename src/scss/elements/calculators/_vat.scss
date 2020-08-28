@@ -1,0 +1,7 @@
+.vatSection {
+    @include calcSection
+
+    .vatForm {
+        @include calcForm
+    }
+}
