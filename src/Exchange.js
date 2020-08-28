@@ -25,7 +25,6 @@ const useStyles = makeStyles({
 
 const Exchange = () => {
     const [data, setData] = useState("");
-    const [date, setDate] = useState("");
     const classes = useStyles();
 
     useEffect(() => {
