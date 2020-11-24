@@ -1,6 +1,5 @@
 ## FinKa
 
-Easy finance calculator 💰
+💰 Finance calculator, current exchange and cryptocurrency pricing
 
-
-*CodersLab reference project*
+Project created using React App. The app calls a publicly available API to display exchange and cryptocurrency pricing. The app use Material UI along with SCSS styling.
