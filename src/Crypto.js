@@ -11,7 +11,6 @@ const TableFontColor = withStyles({
     '@global': {
         ".MuiTableCell-root": {
             color: "white",
-
         }
     }
 })(() => null);
@@ -82,11 +81,8 @@ const Crypto = () => {
                     </Table>
                 </TableContainer>
             </>
-
-
         );
     }
-
 };
 
 export default Crypto;
