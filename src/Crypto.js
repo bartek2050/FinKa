@@ -31,9 +31,8 @@ const Crypto = () => {
         fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=pln&order=market_cap_desc&per_page=100&page=1&sparkline=false")
             .then(response => response.json())
             .then((data) => {
-                let geckoData = data.map((el) =>
-                    // TODO key
-                    <TableRow style={{color: "primary"}}>
+                let geckoData = data.map((el, i) =>
+                    <TableRow key={i} style={{color: "primary"}}>
                         <TableCell><img
                             style={{width: "30px", height: "30px"}}
                             alt={"bitcoin"}

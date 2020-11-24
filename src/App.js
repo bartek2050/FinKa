@@ -15,7 +15,6 @@ import Buttons from "./Buttons";
 
 const App = () => {
 
-
     return (
         <>
         <Router>
