@@ -26,13 +26,29 @@ const useStyles = makeStyles({
 const Exchange = () => {
     const [data, setData] = useState("");
     const classes = useStyles();
+    const currencies = ["USD", "EUR", "CHF"];
 
     useEffect(() => {
-        fetch("https://api.exchangeratesapi.io/latest?base=PLN")
-            .then(response => response.json())
-            .then(data => setData(data.rates))
-            .catch(error => console.log(error));
-
+        const rateExchange = async() => {
+            const response = await fetch(`https://api.frankfurter.app/latest?from=PLN`);
+            const data = await response.json();
+            setData(currencies.map((el) =>{
+            const rate = data?.rates[el];
+                return(
+                    <TableRow>
+                        <TableCell><img alt={el} src={`https://www.ecb.europa.eu/shared/img/flags/${el}.gif`}/></TableCell>
+                        <TableCell>{el}</TableCell>
+                        <TableCell>{rate}</TableCell>
+                    </TableRow>
+                )
+            }));
+        }
+        try {
+            rateExchange();
+        }
+        catch (e) {
+            console.log(e)
+        }
     }, []);
 
     let dateDay = new Date().getDate();
@@ -55,21 +71,7 @@ const Exchange = () => {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        <TableRow>
-                            <TableCell><i className="fi-cnsuxl-europe-flag"></i></TableCell>
-                            <TableCell>EUR</TableCell>
-                            <TableCell>{data.EUR}</TableCell>
-                        </TableRow>
-                        <TableRow>
-                            <TableCell><img alt={"chf"} src={`https://www.ecb.europa.eu/shared/img/flags/USD.gif`}/></TableCell>
-                            <TableCell>USD</TableCell>
-                            <TableCell>{data.USD}</TableCell>
-                        </TableRow>
-                        <TableRow>
-                            <TableCell><img alt={"chf"} src={`https://www.ecb.europa.eu/shared/img/flags/CHF.gif`}/></TableCell>
-                            <TableCell>CHF</TableCell>
-                            <TableCell>{data.CHF}</TableCell>
-                        </TableRow>
+                        {data}
                     </TableBody>
                 </Table>
             </TableContainer>

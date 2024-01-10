@@ -27,30 +27,33 @@ const Crypto = () => {
     const classes = useStyles();
 
     useEffect(() => {
-        fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=pln&order=market_cap_desc&per_page=100&page=1&sparkline=false")
-            .then(response => response.json())
-            .then((data) => {
-                let geckoData = data.map((el, i) =>
-                    <TableRow key={i} style={{color: "primary"}}>
-                        <TableCell><img
-                            style={{width: "30px", height: "30px"}}
-                            alt={"bitcoin"}
-                            src={el.image}/>
-                        </TableCell>
-                        <TableCell>{el.market_cap_rank} </TableCell>
-                        <TableCell>{el.name}</TableCell>
-                        <TableCell>{el.symbol}</TableCell>
-                        <TableCell>{el.current_price}zł</TableCell>
-                        <TableCell>{el.high_24h}zł</TableCell>
-                        <TableCell>{el.low_24h}zł</TableCell>
-                        <TableCell>{el.price_change_24h.toFixed(2)}zł</TableCell>
-                        <TableCell>{el.market_cap_change_percentage_24h.toFixed(2)}%</TableCell>
-                    </TableRow>
-                )
-                setData(geckoData)
-            });
-
-
+        const fetchCryptoData = async () => {
+        try {
+                const response = await fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=pln&order=market_cap_desc&per_page=100&page=1&sparkline=false");
+                const data = await response.json();
+                    const geckoData = data.map((el) =>
+                        <TableRow key={el.symbol} style={{color: "primary"}}>
+                            <TableCell><img
+                                style={{width: "30px", height: "30px"}}
+                                alt={"bitcoin"}
+                                src={el.image}/>
+                            </TableCell>
+                            <TableCell>{el.market_cap_rank} </TableCell>
+                            <TableCell>{el.name}</TableCell>
+                            <TableCell>{el.symbol}</TableCell>
+                            <TableCell>{el.current_price}zł</TableCell>
+                            <TableCell>{el.high_24h}zł</TableCell>
+                            <TableCell>{el.low_24h}zł</TableCell>
+                            <TableCell>{el.price_change_24h.toFixed(2)}zł</TableCell>
+                            <TableCell>{el.market_cap_change_percentage_24h.toFixed(2)}%</TableCell>
+                        </TableRow>
+                    )
+                    setData(geckoData)
+                } catch (e) {
+                    console.log(e)
+                }
+        };
+        fetchCryptoData();
     }, []);
 
     if (data === false) {
