@@ -49,6 +49,7 @@ const Exchange = () => {
         catch (e) {
             console.log(e)
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     let dateDay = new Date().getDate();
